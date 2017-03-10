@@ -10,7 +10,7 @@ Options is an object with the arguments passed to MQTT.js
 The plugin expose:
  - `client`: The MQTT Client
  
- Usage example:
+Usage example:
  ```js
  const Hapi = require('hapi');
  const Boom = require('boom');

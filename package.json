@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "http://gitrepohere"
+    "url": "https://github.com/lorenzo-pizzari/hapi-mqtt.git"
   },
   "keywords": [
     "hapi",
