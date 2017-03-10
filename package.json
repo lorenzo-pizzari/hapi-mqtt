@@ -1,0 +1,27 @@
+{
+  "name": "hapi-mqtt",
+  "version": "0.1.0",
+  "description": "Mqtt client for Hapi.js",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "lab -M 5000 -a code -L"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://gitrepohere"
+  },
+  "keywords": [
+    "hapi",
+    "mqtt"
+  ],
+  "author": "Lorenzo Pizzari <lorenzo@pizzari.it> (http://lorenzopizzari.com)",
+  "license": "MIT",
+  "dependencies": {
+    "mqtt": "^2.4.0"
+  },
+  "devDependencies": {
+    "code": "^4.0.0",
+    "hapi": "^16.1.0",
+    "lab": "^12.1.0"
+  }
+}
