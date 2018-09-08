@@ -61,7 +61,8 @@ await server.register({
       
       console.log(`Server started at ${server.info.uri}`);
  }
-      start().catch(function (err) {
-          throw err;
-      });
+      
+ start().catch(function (err) {
+     throw err;
+ });
 ```
