@@ -7,7 +7,6 @@ const Mqtt = require("../lib/Mqtt");
  * @param {Object} options
  * @param {String} options.brokerUrl
  * @param {Object} options.opts
- * @param next
  */
  const hapiMqtt = async function (server, options) {
     try{
