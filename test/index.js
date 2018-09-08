@@ -22,7 +22,7 @@ describe('Hapi server', () => {
         server.register({
             register: require('../'),
             options: {
-                brokerUrl: 'Mqtt://srvmqttdev.cloudapp.net'
+                brokerUrl: 'mqtt://srvmqttdev.cloudapp.net'
             }
         }, (err) => {
 

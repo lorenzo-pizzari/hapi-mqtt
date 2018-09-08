@@ -23,33 +23,45 @@ Usage example:
      }
  };
  
+ async function start() {
+
  const server = new Hapi.Server();
  
- server.register({
-     register: require('hapi-mqtt'),
-     options: mqttOpts
- }, function (err) {
-     if (err) {
-         console.error(err);
-         throw err;
-     }
+await server.register({
+        plugin: require('hapi-mqtt'),
+        options: {
+            brokerUrl: backBrokerUrl,
+            opts: mqttOptions
+        }
+    });
  
      server.route( {
          method: 'POST',
          path: '/say',
-         handler(request, reply) {
+         handler: async (request, h) => {
              const mqttClient = server.plugins['hapi-mqtt'].client;
-             mqttClient.publish('user/say','something',(err)=>{
-                 if(err) 
-                     return reply(Boom.internal('Internal MQTT error',err));
-                 reply('something');
-             })
+             try{
+                 await mqttClient.publish('user/say','something');
+             }
+             catch (err) {
+                 return Boom.internal('Internal MQTT error',err);
+             }
+             return "something"
          }
      });
  
-     server.start(function() {
-         console.log(`Server started at ${server.info.uri}`);
-     });
- });
-
+      // Start server
+      try {
+          await server.start();
+      }
+      catch (err) {
+          console.log(err);
+          process.exit(1);
+      }
+      
+      console.log(`Server started at ${server.info.uri}`);
+ }
+      start().catch(function (err) {
+          throw err;
+      });
 ```
