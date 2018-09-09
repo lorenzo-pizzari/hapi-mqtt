@@ -1,6 +1,6 @@
 {
   "name": "hapi-mqtt",
-  "version": "1.0",
+  "version": "1.0.0",
   "description": "Mqtt client for Hapi.js",
   "main": "bin/run.js",
   "directories": {
