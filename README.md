@@ -29,10 +29,7 @@ Usage example:
  
 await server.register({
         plugin: require('hapi-mqtt'),
-        options: {
-            brokerUrl: backBrokerUrl,
-            opts: mqttOptions
-        }
+        options: mqttOpts
     });
  
      server.route( {
