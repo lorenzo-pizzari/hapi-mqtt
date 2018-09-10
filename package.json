@@ -19,7 +19,7 @@
     "mqtt"
   ],
   "author": "Lorenzo Pizzari <lorenzo@pizzari.it> (http://lorenzopizzari.com)",
-  "contributors": ["Ciro Santillo <ciro12@hotmail.com>],
+  "contributors": ["Ciro Santillo <ciro12@hotmail.com>"],
   "license": "MIT",
   "dependencies": {
     "mqtt": "^2.18.8"
