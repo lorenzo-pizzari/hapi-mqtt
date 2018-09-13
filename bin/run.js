@@ -20,7 +20,7 @@ const Mqtt = require("../lib/Mqtt");
 
 exports.plugin = {
     name: "hapi-mqtt",
-    version: "1.0.0",
+    version: "1.0.1",
     pkg: require('../package.json'),
     register: hapiMqtt
 };
